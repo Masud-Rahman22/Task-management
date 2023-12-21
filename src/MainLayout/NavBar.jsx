@@ -71,7 +71,10 @@ const NavBar = () => {
             </div>
             {/* profile */}
             <div className="navbar-end">
-            <button className="btn bg-purple-500 text-black border-none px-8" onClick={handleToLogout}>Logout</button>
+            {
+                user ? <button className="btn bg-purple-500 text-black border-none px-8" onClick={handleToLogout}>Logout</button>
+                : ''
+            }
             <div className="dropdown dropdown-end flex gap-5 ">
             
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">

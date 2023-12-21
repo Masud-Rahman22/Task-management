@@ -3,14 +3,21 @@ import './Benefits.css'
 const Benefits = () => {
     return (
         <div>
-            <h1 className='text-4xl text-black text-gradient bg-gradient-to-r from-blue-500 to-blue-800 text-center rounded-md py-2 md:w-3/5 md:mx-auto md:my-10 uppercase'>Who Benefits from TaskFlowPortal?</h1>
+            <div data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500">
+                <h1 className='text-4xl text-black text-gradient bg-gradient-to-r from-blue-500 to-blue-800 text-center rounded-md py-2 md:w-3/5 md:mx-auto md:my-10 uppercase md:mt-40'>Who Benefits from TaskFlowPortal?</h1>
+            </div>
+
             <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                 <li>
-                    <div className="timeline-middle">
+                    <div className="timeline-middle" >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="h-5 w-5 bg-blue-400 rounded-lg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                     </div>
                     <div className="timeline-start md:text-end mb-10">
-                        <div className="card shadow-xl">
+                        <div className="card shadow-xl " data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="card-body benefits-section rounded-lg">
                                 <h2 className="font-bold text-blue-600 text-4xl text-center"></h2>
 
@@ -27,7 +34,9 @@ const Benefits = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="h-5 w-5 bg-blue-400 rounded-lg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                     </div>
                     <div className="timeline-end mb-10">
-                    <div className="card shadow-xl">
+                        <div className="card shadow-xl" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="card-body benefits-section rounded-lg">
                                 <h2 className="font-bold text-blue-600 text-4xl text-center"></h2>
 
@@ -44,7 +53,9 @@ const Benefits = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 bg-blue-400 rounded-lg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                     </div>
                     <div className="timeline-start md:text-end mb-10">
-                    <div className="card shadow-xl">
+                        <div className="card shadow-xl" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="card-body benefits-section rounded-lg">
                                 <h2 className="font-bold text-blue-600 text-4xl text-center"></h2>
 
@@ -61,7 +72,9 @@ const Benefits = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="h-5 w-5 bg-blue-400 rounded-lg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                     </div>
                     <div className="timeline-end mb-10">
-                    <div className="card shadow-xl">
+                        <div className="card shadow-xl " data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="card-body benefits-section rounded-lg">
                                 <h2 className="font-bold text-blue-600 text-4xl text-center"></h2>
 
@@ -78,7 +91,9 @@ const Benefits = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 bg-blue-400 rounded-lg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                     </div>
                     <div className="timeline-start md:text-end mb-10">
-                    <div className="card shadow-xl">
+                        <div className="card shadow-xl" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="card-body benefits-section rounded-lg">
                                 <h2 className="font-bold text-blue-600 text-4xl text-center"></h2>
 
@@ -95,7 +110,9 @@ const Benefits = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="h-5 w-5 bg-blue-400 rounded-lg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                     </div>
                     <div className="timeline-end mb-10">
-                    <div className="card shadow-xl">
+                        <div className="card shadow-xl" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="card-body benefits-section rounded-lg">
                                 <h2 className="font-bold text-blue-600 text-4xl text-center"></h2>
 
@@ -112,7 +129,9 @@ const Benefits = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 bg-blue-400 rounded-lg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
                     </div>
                     <div className="timeline-start md:text-end mb-10">
-                    <div className="card shadow-xl">
+                        <div className="card shadow-xl" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic"
+                            data-aos-duration="2000">
                             <div className="card-body benefits-section rounded-lg">
                                 <h2 className="font-bold text-blue-600 text-4xl text-center"></h2>
 

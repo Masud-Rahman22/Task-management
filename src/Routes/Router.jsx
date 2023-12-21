@@ -11,11 +11,14 @@ import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import AddTask from "../Pages/Dashboard/AddTask";
 import DashboardHome from "../Pages/Dashboard/DashboardHome";
+import TaskUpdate from "../Pages/Dashboard/TaskUpdate";
+import ErrorPage from "../Pages/ErrorPage";
 
 const Router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children : [
             {
                 path: "/",
@@ -45,11 +48,16 @@ const Router = createBrowserRouter([
         children : [
             {
                 path: 'DashboardHome',
-                element: <DashboardHome></DashboardHome>
+                element: <PrivateRoute><DashboardHome></DashboardHome></PrivateRoute>
             },
             {
                 path: 'addTask',
-                element: <AddTask></AddTask>
+                element: <PrivateRoute><AddTask></AddTask></PrivateRoute>
+            },
+            {
+                path: 'taskUpdate/:id',
+                element: <PrivateRoute><TaskUpdate></TaskUpdate></PrivateRoute>,
+                loader: ({params})=> fetch(`http://localhost:5000/tasks/${params.id}`) 
             }
         ]
     }
