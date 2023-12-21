@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./NavBar";
 import img from '../../public/background/9154281.jpg'
+import Footer from "./Footer";
 
 const Main = () => {
     const backgroundImageStyle = {
@@ -13,6 +14,7 @@ const Main = () => {
         <div style={backgroundImageStyle}>
             <NavBar></NavBar>
             <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };

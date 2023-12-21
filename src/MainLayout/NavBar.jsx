@@ -1,14 +1,38 @@
 import { NavLink } from "react-router-dom";
-import logo from '../../public/logo/default.png'
+import logo from '../../public/logo/cover.png'
 const NavBar = () => {
     const Links = <>
-        <li className="text-black lg:mr-2"><NavLink
+        <li className="text-white lg:mr-2"><NavLink
             to="/"
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold bg-blue-500 p-1 md:p-3 rounded-lg" : ""
+                isPending ? "pending" : isActive ? "font-bold bg-blue-500 p-1 md:p-3 rounded-lg text-white" : ""
             }
         >
             Home
+        </NavLink></li>
+        <li className="text-white lg:mr-2"><NavLink
+            to="ourTeam"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "font-bold bg-blue-500 p-1 md:p-3 rounded-lg text-white" : ""
+            }
+        >
+            Our Team
+        </NavLink></li>
+        <li className="text-white lg:mr-2"><NavLink
+            to="contact"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "font-bold bg-blue-500 p-1 md:p-3 rounded-lg text-white" : ""
+            }
+        >
+            Contact Us
+        </NavLink></li>
+        <li className="text-white lg:mr-2"><NavLink
+            to="login"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "font-bold bg-blue-500 p-1 md:p-3 rounded-lg text-white" : ""
+            }
+        >
+            Login
         </NavLink></li>
     </>
     return (
@@ -22,7 +46,7 @@ const NavBar = () => {
                         {Links}
                     </ul>
                 </div>
-                <img className="w-[110px] h-[110px]" src={logo} alt="" />
+                <img className="w-[250px] h-[100px]" src={logo} alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

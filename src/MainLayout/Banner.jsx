@@ -17,6 +17,7 @@ import './Banner.css';
 // import required modules
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import Lottie from 'lottie-react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -61,6 +62,9 @@ const Banner = () => {
                     <Lottie className='w-[500px] h-[500px]' animationData={animation1}></Lottie>
                 </SwiperSlide>
             </Swiper>
+            <Link to='login'><div className='text-center'>
+            <button className=" py-3 bg-gradient-to-r from-blue-400 to-blue-700 font-bold text-xl rounded-md shadow-md hover:from-blue-600 hover:to-blue-900 transition-all duration-300 text-black uppercase md:w-96 mt-10">Let's Explore</button>
+            </div></Link>
         </div>
     );
 };
