@@ -1,6 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from '../../public/logo/cover.png'
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 const NavBar = () => {
+    const { Logout, user } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const handleToLogout = () => {
+        Logout()
+            .then(()=>{
+                navigate('/')
+            })
+            .catch()
+    }
     const Links = <>
         <li className="text-white lg:mr-2"><NavLink
             to="/"
@@ -26,7 +37,10 @@ const NavBar = () => {
         >
             Contact Us
         </NavLink></li>
-        <li className="text-white lg:mr-2"><NavLink
+        {
+            user ? ''
+            :
+            <li className="text-white lg:mr-2"><NavLink
             to="login"
             className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold bg-blue-500 p-1 md:p-3 rounded-lg text-white" : ""
@@ -34,7 +48,9 @@ const NavBar = () => {
         >
             Login
         </NavLink></li>
+        }
     </>
+    
     return (
         <div className="navbar">
             <div className="navbar-start">
@@ -55,19 +71,22 @@ const NavBar = () => {
             </div>
             {/* profile */}
             <div className="navbar-end">
-            <div className="dropdown dropdown-end">
+            <button className="btn bg-purple-500 text-black border-none px-8" onClick={handleToLogout}>Logout</button>
+            <div className="dropdown dropdown-end flex gap-5 ">
+            
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                        <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    {
+                        user && <div className="w-10 rounded-full">
+                        <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
                     </div>
+                    }
                 </div>
-                <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                <ul tabIndex={0} className="mt-14 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                     <li>
-                        <a className="justify-between">
+                        <Link to='/dashboard/DashboardHome' className="justify-between">
                             Profile
-                        </a>
+                        </Link>
                     </li>
-                    <li><a>Logout</a></li>
                 </ul>
             </div>
             </div>

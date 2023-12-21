@@ -7,6 +7,10 @@ import Contact from "../Pages/Contact/Contact";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import OurTeam from "../Pages/Our_Team/OurTeam";
+import PrivateRoute from "../../PrivateRoute/PrivateRoute";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import AddTask from "../Pages/Dashboard/AddTask";
+import DashboardHome from "../Pages/Dashboard/DashboardHome";
 
 const Router = createBrowserRouter([
     {
@@ -35,5 +39,19 @@ const Router = createBrowserRouter([
             },
         ]
     },
+    {
+        path: 'dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children : [
+            {
+                path: 'DashboardHome',
+                element: <DashboardHome></DashboardHome>
+            },
+            {
+                path: 'addTask',
+                element: <AddTask></AddTask>
+            }
+        ]
+    }
 ]);
 export default Router;
