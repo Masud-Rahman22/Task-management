@@ -27,15 +27,15 @@ const Router = createBrowserRouter([
             },
             {
                 path: 'contact',
-                element: <Contact></Contact>
+                element: <PrivateRoute><Contact></Contact></PrivateRoute>
             },
             {
                 path: 'ourTeam',
-                element: <OurTeam></OurTeam>
+                element: <PrivateRoute><OurTeam></OurTeam></PrivateRoute>
             },
             {
                 path: 'faq',
-                element: <FaqQuestions></FaqQuestions>
+                element: <PrivateRoute><FaqQuestions></FaqQuestions></PrivateRoute>
             },
             {
                 path: 'login',

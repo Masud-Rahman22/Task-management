@@ -14,12 +14,14 @@ const AddTask = () => {
         const deadline = data.deadline
         const priority = data.priority
         const email = user?.email
+        const status = 'todo'
         const taskInfo = {
             title,
             description,
             deadline,
             priority,
-            email
+            email,
+            status
         }
         axios.post('https://task-management-server-three-xi.vercel.app/tasks',taskInfo)
         .then(res =>{
