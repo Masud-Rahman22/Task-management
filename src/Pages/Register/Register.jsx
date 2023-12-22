@@ -6,6 +6,8 @@ import { FaGithub } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
+import auth from "../../../firebase.config";
 
 const Register = () => {
     const navigate = useNavigate();
@@ -45,6 +47,13 @@ const Register = () => {
         register(email, password)
             .then(() => {
                 toast.success('You successfully signed up');
+                updateProfile(auth.currentUser, {
+                    displayName: name, photoURL: photo
+                }).then(() => {
+                    console.log('profile updated');
+                }).catch((error) => {
+                    console.log(error);
+                });
                 navigate('/login')
             })
             .catch()
@@ -62,7 +71,7 @@ const Register = () => {
 
                             <form onSubmit={handleToRegister} className="card-body">
                                 <div className="form-control">
-                                    <input name="name" type="text" placeholder="Last Name" className="border-b-2 font-bold text-sm w-full mt-5 p-2 rounded text-black" required />
+                                    <input name="name" type="text" placeholder="Full Name" className="border-b-2 font-bold text-sm w-full mt-5 p-2 rounded text-black" required />
                                 </div>
                                 <div className="form-control">
                                     <input name="photo" type="photo" placeholder="Photo Url" className="border-b-2 font-bold text-sm w-full mt-5 p-2 rounded text-black" required />

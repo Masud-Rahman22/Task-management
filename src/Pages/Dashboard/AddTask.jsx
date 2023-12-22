@@ -1,20 +1,25 @@
 import axios from "axios";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const AddTask = () => {
+    const {user} = useContext(AuthContext)
     const { register, handleSubmit, reset } = useForm()
     const onSubmit = async (data) => {
         const title = data.title
         const description = data.description
         const deadline = data.deadline
         const priority = data.priority
+        const email = user?.email
         const taskInfo = {
             title,
             description,
             deadline,
-            priority
+            priority,
+            email
         }
         axios.post('http://localhost:5000/tasks',taskInfo)
         .then(res =>{
