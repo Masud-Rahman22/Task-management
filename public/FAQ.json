@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "What is a task management website?",
+        "description": "A task management website is an online platform designed to help individuals or teams organize, track, and prioritize tasks and projects. It typically provides features like task creation, assignment, scheduling, progress tracking, and collaboration tools."
+    },
+    {
+        "id": 2,
+        "title": "What are the benefits of using a task management website?",
+        "description": "Using a task management website offers several benefits, including enhanced productivity, better organization, improved task prioritization, streamlined communication among team members, centralized task tracking, and the ability to monitor project progress in real-time."
+    },
+    {
+        "id": 3,
+        "title": "What features should I look for in a task management website?",
+        "description": "Essential features in a task management website include task creation and assignment, deadline setting, priority levels, progress tracking, collaboration tools (comments, file sharing), calendar integration, mobile accessibility, and customizable task views."
+    },
+    {
+        "id": 4,
+        "title": "Is it possible to use a task management website for personal tasks?",
+        "description": "Yes, many task management websites cater to both personal and professional use. Users can create separate task lists for personal errands, appointments, shopping lists, and more, in addition to work-related tasks."
+    },
+    {
+        "id": 5,
+        "title": "Can a task management website integrate with other tools or apps?",
+        "description": "Most task management websites offer integrations with popular tools and apps, such as calendars (Google Calendar, Outlook), communication tools (Slack, Microsoft Teams)."
+    },
+    {
+        "id": 6,
+        "title": "How secure are task management websites in terms of data privacy?",
+        "description": "Reputable task management websites prioritize data security and employ encryption protocols to protect user data. They often comply with industry-standard security measures and regulations, providing secure access, data backup, and limited access controls."
+    },
+    {
+        "id": 7,
+        "title": "Are task management websites user-friendly for beginners?",
+        "description": "Yes, many task management websites are designed with intuitive user interfaces and provide tutorials, guides, and customer support to assist beginners."
+    },
+    {
+        "id": 8,
+        "title": "Can I collaborate with team members or colleagues on a task management website?",
+        "description": "Absolutely. Task management websites facilitate collaboration by allowing users to create shared task lists, assign tasks to specific team members."
+    },
+    {
+        "id": 9,
+        "title": "Do task management websites offer mobile apps for on-the-go access?",
+        "description": "Yes, most task management websites have dedicated mobile applications compatible with iOS and Android devices, ensuring users can access."
+    }
+]

@@ -18,7 +18,7 @@ const TaskUpdate = () => {
             deadline,
             priority
         }
-        const res = await axios.put(`http://localhost:5000/tasks/${taskDetails._id}`, taskInfo)
+        const res = await axios.put(`https://task-management-server-three-xi.vercel.app/tasks/${taskDetails._id}`, taskInfo)
         if (res.data.modifiedCount > 0) {
             reset()
             toast('Changes saved!',

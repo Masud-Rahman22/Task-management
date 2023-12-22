@@ -13,6 +13,7 @@ import AddTask from "../Pages/Dashboard/AddTask";
 import DashboardHome from "../Pages/Dashboard/DashboardHome";
 import TaskUpdate from "../Pages/Dashboard/TaskUpdate";
 import ErrorPage from "../Pages/ErrorPage";
+import FaqQuestions from "../assets/FAQ/FaqQuestions";
 
 const Router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const Router = createBrowserRouter([
             {
                 path: 'ourTeam',
                 element: <OurTeam></OurTeam>
+            },
+            {
+                path: 'faq',
+                element: <FaqQuestions></FaqQuestions>
             },
             {
                 path: 'login',
@@ -57,7 +62,7 @@ const Router = createBrowserRouter([
             {
                 path: 'taskUpdate/:id',
                 element: <PrivateRoute><TaskUpdate></TaskUpdate></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/tasks/${params.id}`) 
+                loader: ({params})=> fetch(`https://task-management-server-three-xi.vercel.app/tasks/${params.id}`) 
             }
         ]
     }

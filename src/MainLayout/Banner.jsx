@@ -41,7 +41,7 @@ const Banner = () => {
                 }}
                 pagination={true}
                 modules={[EffectCoverflow, Pagination]}
-                className="mySwiper"
+                className="mySwiper mt-16 md:mt-20 lg:mt-1"
             >
                 <SwiperSlide >
                     <Lottie className='w-[500px] h-[500px]' animationData={animation2}></Lottie>

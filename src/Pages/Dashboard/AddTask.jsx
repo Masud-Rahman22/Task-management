@@ -21,7 +21,7 @@ const AddTask = () => {
             priority,
             email
         }
-        axios.post('http://localhost:5000/tasks',taskInfo)
+        axios.post('https://task-management-server-three-xi.vercel.app/tasks',taskInfo)
         .then(res =>{
             console.log(res.data);
             if(res.data.insertedId){
